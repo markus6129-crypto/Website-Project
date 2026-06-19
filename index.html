@@ -12,7 +12,6 @@
 <body>
   <main class="app">
 
-    <!-- Header: title, subtitle, and dark mode toggle -->
     <header class="header">
       <div class="header-top">
         <h1>FlashEspañol <span class="flag">🇪🇸</span></h1>
@@ -23,7 +22,6 @@
       <p class="subtitle">Learn Spanish, one card at a time</p>
     </header>
 
-    <!-- Category filter chips -->
     <div class="categories" id="categories">
       <button class="chip active" data-category="all">All</button>
       <button class="chip" data-category="greetings">Greetings</button>
@@ -33,7 +31,6 @@
       <button class="chip" data-category="verbs">Verbs</button>
     </div>
 
-    <!-- Stats bar: score and streak -->
     <div class="stats">
       <div class="stat">
         <span class="stat-label">Score</span>
@@ -49,7 +46,6 @@
       </div>
     </div>
 
-    <!-- The flashcard: click to flip -->
     <div class="card" id="card" role="button" tabindex="0" aria-label="Flashcard, click to flip">
       <div class="card-inner">
         <div class="card-face card-front">
@@ -68,7 +64,6 @@
       </div>
     </div>
 
-    <!-- Self-rating buttons (only visible after flipping) -->
     <div class="rating" id="rating">
       <button id="dont-know-btn" class="btn-rate btn-dont-know">
         <span>✗</span> Didn't know
@@ -78,14 +73,12 @@
       </button>
     </div>
 
-    <!-- Navigation controls -->
     <div class="controls">
       <button id="prev-btn" class="btn btn-secondary" title="Previous (←)">← Prev</button>
       <button id="shuffle-btn" class="btn btn-secondary" title="Shuffle (S)">🔀 Shuffle</button>
       <button id="next-btn" class="btn btn-primary" title="Next (→)">Next →</button>
     </div>
 
-    <!-- Keyboard shortcuts hint -->
     <p class="shortcuts">
       <kbd>Space</kbd> flip · <kbd>←</kbd> <kbd>→</kbd> navigate · <kbd>S</kbd> shuffle
     </p>
