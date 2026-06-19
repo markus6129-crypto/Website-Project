@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlashEspañol — Learn Spanish with Flashcards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+
+    <!-- Header: title, subtitle, and dark mode toggle -->
+    <header class="header">
+      <div class="header-top">
+        <h1>FlashEspañol <span class="flag">🇪🇸</span></h1>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+      <p class="subtitle">Learn Spanish, one card at a time</p>
+    </header>
+
+    <!-- Category filter chips -->
+    <div class="categories" id="categories">
+      <button class="chip active" data-category="all">All</button>
+      <button class="chip" data-category="greetings">Greetings</button>
+      <button class="chip" data-category="numbers">Numbers</button>
+      <button class="chip" data-category="colors">Colors</button>
+      <button class="chip" data-category="food">Food</button>
+      <button class="chip" data-category="verbs">Verbs</button>
+    </div>
+
+    <!-- Stats bar: score and streak -->
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-label">Score</span>
+        <span class="stat-value" id="score">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Streak</span>
+        <span class="stat-value" id="streak">0 🔥</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Progress</span>
+        <span class="stat-value" id="progress">0/0</span>
+      </div>
+    </div>
+
+    <!-- The flashcard: click to flip -->
+    <div class="card" id="card" role="button" tabindex="0" aria-label="Flashcard, click to flip">
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <span class="card-label" id="front-category">Spanish</span>
+          <p class="card-word" id="spanish-word">Loading…</p>
+          <button class="speaker-btn" id="speaker-btn" aria-label="Pronounce word" title="Hear pronunciation">
+            🔊
+          </button>
+          <span class="flip-hint">Tap to flip</span>
+        </div>
+        <div class="card-face card-back">
+          <span class="card-label">English</span>
+          <p class="card-word" id="english-word">Loading…</p>
+          <span class="flip-hint">Tap to flip back</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Self-rating buttons (only visible after flipping) -->
+    <div class="rating" id="rating">
+      <button id="dont-know-btn" class="btn-rate btn-dont-know">
+        <span>✗</span> Didn't know
+      </button>
+      <button id="know-btn" class="btn-rate btn-know">
+        <span>✓</span> I knew it
+      </button>
+    </div>
+
+    <!-- Navigation controls -->
+    <div class="controls">
+      <button id="prev-btn" class="btn btn-secondary" title="Previous (←)">← Prev</button>
+      <button id="shuffle-btn" class="btn btn-secondary" title="Shuffle (S)">🔀 Shuffle</button>
+      <button id="next-btn" class="btn btn-primary" title="Next (→)">Next →</button>
+    </div>
+
+    <!-- Keyboard shortcuts hint -->
+    <p class="shortcuts">
+      <kbd>Space</kbd> flip · <kbd>←</kbd> <kbd>→</kbd> navigate · <kbd>S</kbd> shuffle
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
